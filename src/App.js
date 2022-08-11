@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./header/Header";
 import Pages from "./pages/Pages";
 import Data from "./components/Data";
@@ -8,7 +8,8 @@ import Cart from "./Cart/Cart";
 import Footer from "./footer/Footer";
 import Sdata from "./components/shops/Sdata";
 import Usuario from "./components/usuario/Usuario";
-import firebase from "firebase";
+import Register from "./components/Login/Register";
+import { AuthProvider } from "./components/context/AuthContext";
 
 function App() {
   const { productItems } = Data;
@@ -51,25 +52,33 @@ function App() {
     <>
       <Router>
         <Header CartItem={CartItem} />
-        <Switch>
-          <Route path="/" exact>
-            <Pages
-              productItems={productItems}
-              addToCart={addToCart}
-              shopItems={shopItems}
+        <AuthProvider>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Pages
+                  productItems={productItems}
+                  addToCart={addToCart}
+                  shopItems={shopItems}
+                />
+              }
             />
-          </Route>
-          <Route path="/cart" exact>
-            <Cart
-              CartItem={CartItem}
-              addToCart={addToCart}
-              decreaseQty={decreaseQty}
+            <Route
+              path="/cart"
+              element={
+                <Cart
+                  CartItem={CartItem}
+                  addToCart={addToCart}
+                  decreaseQty={decreaseQty}
+                />
+              }
             />
-          </Route>
-          <Route path="/usuario" exact>
-            <Usuario />
-          </Route>
-        </Switch>
+
+            <Route path="/usuario" element={<Usuario />} />
+            <Route path="/register" element={<Register />} />
+          </Routes>
+        </AuthProvider>
         <Footer />
       </Router>
     </>

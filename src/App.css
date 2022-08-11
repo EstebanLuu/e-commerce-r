@@ -163,6 +163,17 @@ button {
   margin: 10px;
 }
 
+.product3 {
+  user-select: none;
+  height: 200px;
+  background: #fff;
+  padding: 20px;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: rgb(3 0 71 / 9%) 0px 1px 3px;
+  margin: 10px;
+}
+
 .box .img {
   user-select: none;
 }

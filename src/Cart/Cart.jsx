@@ -22,7 +22,7 @@ const Cart = ({ CartItem, addToCart, decreaseQty }) => {
               const productQty = item.price * item.qty;
 
               return (
-                <div className="cart-list product d_flex" key={item.id}>
+                <div className="cart-list product3 d_flex" key={item.id}>
                   <div className="img">
                     <img src={item.cover} alt="" />
                   </div>
