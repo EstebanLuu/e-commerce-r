@@ -1,51 +1,56 @@
-import React, { useState } from "react"
-import { Link } from "react-router-dom"
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  // Toogle Menu
-  const [MobileMenu, setMobileMenu] = useState(false)
+  const [MobileMenu, setMobileMenu] = useState(false);
   return (
     <>
-      <header className='header'>
-        <div className='container d_flex'>
-          <div className='catgrories d_flex'>
-            <span class='fa-solid fa-border-all'></span>
+      <header className="header">
+        <div className="container d_flex">
+          <div className="catgrories d_flex">
+            <span className="fa-solid fa-border-all"></span>
             <h4>
-              Categories <i className='fa fa-chevron-down'></i>
+              Categorías <i className="fa fa-chevron-down"></i>
             </h4>
           </div>
 
-          <div className='navlink'>
-            <ul className={MobileMenu ? "nav-links-MobileMenu" : "link f_flex capitalize"} onClick={() => setMobileMenu(false)}>
-              {/*<ul className='link f_flex uppercase {MobileMenu ? "nav-links-MobileMenu" : "nav-links"} onClick={() => setMobileMenu(false)}'>*/}
+          <div className="navlink">
+            <ul
+              className={
+                MobileMenu ? "nav-links-MobileMenu" : "link f_flex capitalize"
+              }
+              onClick={() => setMobileMenu(false)}
+            >
+              {/* Rutas */}
               <li>
-                <Link to='/'>home</Link>
+                <Link to="/">Inicio</Link>
               </li>
               <li>
-                <Link to='/pages'>pages</Link>
+                <Link to="/usuario">Usuario</Link>
               </li>
               <li>
-                <Link to='/user'>user account</Link>
+                <Link to="/vendedor">Vender</Link>
               </li>
               <li>
-                <Link to='/vendor'>vendor account</Link>
-              </li>
-              <li>
-                <Link to='/track'>track my order</Link>
-              </li>
-              <li>
-                <Link to='/contact'>contact</Link>
+                <Link to="/contacto">Contacto</Link>
               </li>
             </ul>
 
-            <button className='toggle' onClick={() => setMobileMenu(!MobileMenu)}>
-              {MobileMenu ? <i className='fas fa-times close home-btn'></i> : <i className='fas fa-bars open'></i>}
+            <button
+              className="toggle"
+              onClick={() => setMobileMenu(!MobileMenu)}
+            >
+              {MobileMenu ? (
+                <i className="fas fa-times close home-btn"></i>
+              ) : (
+                <i className="fas fa-bars open"></i>
+              )}
             </button>
           </div>
         </div>
       </header>
     </>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

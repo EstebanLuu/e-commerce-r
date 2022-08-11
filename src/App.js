@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Header from "./common/header/Header";
+import Header from "./header/Header";
 import Pages from "./pages/Pages";
 import Data from "./components/Data";
-import Cart from "./common/Cart/Cart";
-import Footer from "./common/footer/Footer";
+import Cart from "./Cart/Cart";
+import Footer from "./footer/Footer";
 import Sdata from "./components/shops/Sdata";
+import Usuario from "./components/usuario/Usuario";
+import firebase from "firebase";
 
 function App() {
   const { productItems } = Data;
@@ -63,6 +65,9 @@ function App() {
               addToCart={addToCart}
               decreaseQty={decreaseQty}
             />
+          </Route>
+          <Route path="/usuario" exact>
+            <Usuario />
           </Route>
         </Switch>
         <Footer />

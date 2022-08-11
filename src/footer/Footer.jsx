@@ -1,58 +1,53 @@
-import React from "react"
-import "./style.css"
+import React from "react";
+import "./style.css";
 
 const Footer = () => {
   return (
     <>
       <footer>
-        <div className='container grid2'>
-          <div className='box'>
-            <h1>Bonik</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor libero id et, in gravida. Sit diam duis mauris nulla cursus. Erat et lectus vel ut sollicitudin elit at amet.</p>
-            <div className='icon d_flex'>
-              <div className='img d_flex'>
-                <i class='fa-brands fa-google-play'></i>
-                <span>Google Play</span>
-              </div>
-              <div className='img d_flex'>
-                <i class='fa-brands fa-app-store-ios'></i>
-                <span>App Store</span>
-              </div>
-            </div>
-          </div>
-
-          <div className='box'>
-            <h2>About Us</h2>
+        <div className="container grid2">
+          <div className="box">
+            <h2>Sobre nosotros</h2>
             <ul>
-              <li>Careers</li>
-              <li>Our Stores</li>
-              <li>Our Cares</li>
-              <li>Terms & Conditions</li>
-              <li>Privacy Policy</li>
+              <li>Nuestros trabajadores</li>
+              <li>Sucursales</li>
+              <li>Redes</li>
+              <li>Términos y condiciones</li>
+              <li>Política de privacidad</li>
             </ul>
           </div>
-          <div className='box'>
-            <h2>Customer Care</h2>
+          <div className="box">
+            <h2>Cuidado del usuario</h2>
             <ul>
-              <li>Help Center </li>
-              <li>How to Buy </li>
-              <li>Track Your Order </li>
-              <li>Corporate & Bulk Purchasing </li>
-              <li>Returns & Refunds </li>
+              <li>Ayuda</li>
+              <li>Como comprar </li>
+              <li>Seguimiento de compra </li>
+              <li>Compra al por mayor</li>
+              <li>Reembolsos</li>
             </ul>
           </div>
-          <div className='box'>
-            <h2>Contact Us</h2>
+          <div className="box">
+            <h2>Contacto</h2>
             <ul>
-              <li>70 Washington Square South, New York, NY 10012, United States </li>
-              <li>Email: uilib.help@gmail.com</li>
-              <li>Phone: +1 1123 456 780</li>
+              <li>Argentina </li>
+              <li>Email: Cuenta@reactecommerce.com</li>
+              <li>Phone: +54 1234-5678</li>
             </ul>
+          </div>
+        </div>
+        <div className="icon d_flex">
+          <div className="img d_flex">
+            <i className="fa-brands fa-google-play"></i>
+            <span>Google Play</span>
+          </div>
+          <div className="img d_flex">
+            <i className="fa-brands fa-app-store-ios"></i>
+            <span>App Store</span>
           </div>
         </div>
       </footer>
     </>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

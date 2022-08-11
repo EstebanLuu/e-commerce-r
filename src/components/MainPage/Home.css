@@ -27,3 +27,17 @@
   left: 0;
   margin: auto;
 }
+
+.slick-dots li.slick-active button:before {
+  opacity: 0.75;
+  color: #60330f !important;
+}
+
+.homeSlide ul li button::before {
+  font-size: 15px !important;
+  color: #60330f !important;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  margin: auto;
+}

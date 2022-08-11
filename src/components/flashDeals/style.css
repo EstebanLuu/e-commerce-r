@@ -2,3 +2,9 @@
   background: #f6f9fc;
   padding: 50px 0;
 }
+
+.fa-bolt:before,
+.fa-zap:before {
+  content: "\f0e7";
+  color: #60330f;
+}

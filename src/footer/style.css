@@ -1,14 +1,9 @@
 footer {
-  background-color: #0f3460;
+  background-color: #60330f;
   padding: 100px 0;
   color: #fff;
 }
-footer h1 {
-  margin-bottom: 30px;
-  color: #e94560;
-  font-weight: 800;
-  font-style: italic;
-}
+
 footer .img {
   background-color: #0c2a4d;
   padding: 15px 20px;
@@ -33,4 +28,9 @@ footer h2 {
 footer li {
   margin-bottom: 10px;
   opacity: 0.5;
+}
+
+.icon {
+  padding-top: 40px;
+  justify-content: space-around;
 }

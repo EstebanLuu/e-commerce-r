@@ -1,67 +1,67 @@
-import React from "react"
+import React from "react";
 
 const Categories = () => {
   const data = [
     {
       cateImg: "./images/category/cat1.png",
-      cateName: "Fashion",
+      cateName: "Indumentaria",
     },
     {
       cateImg: "./images/category/cat2.png",
-      cateName: "Electronic",
+      cateName: "Electronica",
     },
     {
       cateImg: "./images/category/cat3.png",
-      cateName: "Cars",
+      cateName: "accesorios",
     },
     {
       cateImg: "./images/category/cat4.png",
-      cateName: "Home & Garden",
+      cateName: "Hogar y jardinería",
     },
     {
       cateImg: "./images/category/cat5.png",
-      cateName: "Gifts",
+      cateName: "Regalos",
     },
     {
       cateImg: "./images/category/cat6.png",
-      cateName: "Music",
+      cateName: "Musica",
     },
     {
       cateImg: "./images/category/cat7.png",
-      cateName: "Health & Beauty",
+      cateName: "Salud y belleza",
     },
     {
       cateImg: "./images/category/cat8.png",
-      cateName: "Pets",
+      cateName: "Mascotas",
     },
     {
       cateImg: "./images/category/cat9.png",
-      cateName: "Baby Toys",
+      cateName: "Juguetes",
     },
     {
       cateImg: "./images/category/cat10.png",
-      cateName: "Groceries",
+      cateName: "Mercaderia",
     },
     {
       cateImg: "./images/category/cat11.png",
-      cateName: "Books",
+      cateName: "Libros",
     },
-  ]
+  ];
 
   return (
     <>
-      <div className='category'>
+      <div className="category">
         {data.map((value, index) => {
           return (
-            <div className='box f_flex' key={index}>
-              <img src={value.cateImg} alt='' />
+            <div className="box f_flex" key={index}>
+              <img src={value.cateImg} alt="" />
               <span>{value.cateName}</span>
             </div>
-          )
+          );
         })}
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Categories
+export default Categories;
